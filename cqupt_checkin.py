@@ -83,21 +83,21 @@ if "WXPUSHERTOPICIDS" in os.environ:
 
 '''--------------------------------------------------'''
 
-if checkin_data['LONGITUDE'] == "" or checkin_data['LATITUDE'] == "":
-    print("请输入经纬度,或者保证代码中已填写经纬度")
-    sys.exit(1)
+# if checkin_data['LONGITUDE'] == "" or checkin_data['LATITUDE'] == "":
+#     print("请输入经纬度,或者保证代码中已填写经纬度")
+#     sys.exit(1)
 
-if checkin_data['JZDXXDZ'] == "详细地址" or checkin_data['JZDXXDZ'] == "":
-    print("请输入详细地址,或者保证代码中已填写详细地址")
-    sys.exit(1)
+# if checkin_data['JZDXXDZ'] == "详细地址" or checkin_data['JZDXXDZ'] == "":
+#     print("请输入详细地址,或者保证代码中已填写详细地址")
+#     sys.exit(1)
 
-if USERNAME == "":
-    print("请输入用户名,或者保证代码中已填写用户名")
-    sys.exit(1)
+# if USERNAME == "":
+#     print("请输入用户名,或者保证代码中已填写用户名")
+#     sys.exit(1)
 
-if PASSWORD == "":
-    print("请输入密码,或者保证代码中已填写密码")
-    sys.exit(1)
+# if PASSWORD == "":
+#     print("请输入密码,或者保证代码中已填写密码")
+#     sys.exit(1)
 
 # 经纬度随机扰动
 checkin_data['LONGITUDE'] = str(round(float(checkin_data["LONGITUDE"]) + 0.0001 * random.randint(-4, 4), 4))
