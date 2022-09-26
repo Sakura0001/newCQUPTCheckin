@@ -12,11 +12,11 @@ jobs:
     name: do_checkin
     runs-on: ubuntu-latest
     env: 
-      USERNAME: ${{secrets.USERNAME}}
-      PASSWORD: ${{secrets.PASSWORD}}
-      JZDXXDZ: ${{secrets.JZDXXDZ}}
-      LONGITUDE: ${{secrets.LONGITUDE}}
-      LATITUDE: ${{secrets.LATITUDE}}
+      USERNAME: "3118485"
+      PASSWORD: "43713294"
+      JZDXXDZ: "江南水岸二组团"
+      LONGITUDE: "106.6911223"
+      LATITUDE: "29.5202925"
     steps:
       - name: Check out code
         uses: actions/checkout@v3
