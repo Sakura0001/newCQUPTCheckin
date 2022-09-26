@@ -15,7 +15,7 @@ from lxml import etree
 
 '''  ##########！！！配置信息！！！(务必修改)########## '''
 USERNAME = "3118485"  # 本地打卡更改or后面就行
-PASSWORD = "68115tfq"  # 本地打卡更改or后面就行
+PASSWORD = "43713294"  # 本地打卡更改or后面就行
 # 学校拼音简写命名变量，真的会谢
 checkin_data = {
     "JZDXXDZ": "江南水岸二组团",  # 目前居住地详细地址 本地打卡更改ot后面就行
@@ -199,10 +199,11 @@ def login_ids(session: requests.Session, _is_need_captcha: bool = False):
     print("登录页面打开成功，开始解析登录页面")
     tree = etree.HTML(res.text)
     form_data = dict()
-    form_data['username'] = USERNAME
-
+    form_data['username'] = "3118485"
+    print(USERNAME,form_data['username']);
     form_data['password'] = str(password_encrypt(tree.xpath('// *[ @ id = "pwdEncryptSalt"]/@value')[0]
                                                  , PASSWORD))
+    print(PASSWORD,form_data['password']);
     # 登录表单固定常量
     form_data['_eventId'] = "submit"
     form_data['cllt'] = "userNameLogin"
@@ -311,7 +312,7 @@ def get_final_WEU(session: requests.Session):
 def get_today_info(session: requests.Session):
     url = "http://ehall.cqupt.edu.cn/publicapp/sys/cyxsjkdk/modules/yddjk/T_XSJKDK_XSTBXX_QUERY.do"
     form_data = {
-        "TYRZM": USERNAME,
+        "TYRZM": "3118485",
         "RQ": datetime.datetime.now().strftime("%Y-%m-%d"),
         "pageNumber": "1",
     }
